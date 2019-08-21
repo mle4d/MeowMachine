@@ -1,7 +1,20 @@
-.Button {
-  button {
-    backgroundColor: 'pink'
 
+  button {
+    background-color: #dbafff;
+    color: #ffffb0;
+    height: 200px;
+    width: 200px;
+    display: grid;
+    border-width: 12px;
+    border-color: #ffabde;
+    font-size: 30px;
   }
-};
+  div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: #afd0ff;
+  }
+
 
