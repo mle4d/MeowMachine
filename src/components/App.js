@@ -1,59 +1,61 @@
 import React, { Component } from 'react';
-import meow1 from './assets/meow1';
-import meow2 from './assets/meow2';
-import meow3 from './assets/meow3';
-import meow4 from './assets/meow4';
-import meow5 from './assets/meow5';
-import meow6 from './assets/meow6';
-import meow7 from './assets/meow7';
-import meow8 from './assets/meow8';
-import meow9 from './assets/meow9';
+import Button from './button';
+import meow1 from './assets/meows/meow1.mp3';
+import meow2 from './assets/meows/meow2.mp3';
+import meow3 from './assets/meows/meow3.mp3';
+import meow4 from './assets/meows/meow4.mp3';
+import meow5 from './assets/meows/meow5.mp3';
+import meow6 from './assets/meows/meow6.mp3';
+import meow7 from './assets/meows/meow7.mp3';
+import meow8 from './assets/meows/meow8.mp3';
+import meow9 from './assets/meows/meow9.mp3';
+import cat1 from './assets/cats/cat1.jpg';
+import cat2 from './assets/cats/cat2.jpg';
+import cat3 from './assets/cats/cat3.jpg';
+import cat4 from './assets/cats/cat4.jpg';
+import cat5 from './assets/cats/cat5.jpg';
+import cat6 from './assets/cats/cat6.jpg';
+import cat7 from './assets/cats/cat7.jpg';
+import cat8 from './assets/cats/cat8.jpg';
+import cat9 from './assets/cats/cat9.jpg';
 
 const meowMap = {
   meow1: {
-    keyCode: 111,
     name: 'meow1',
-    src: './assets/meow1.mp3'
+    src: meow1,
+    image: cat1
   },
   meow2: {
-    keyCode: 222,
     name: 'meow2',
-    src: './assets/meow2.mp3'
+    src: meow2
   },
   meow3: {
-    keyCode: 333,
-    name: 'meow1',
-    src: './assets/meow3.mp3'
+    name: 'meow3',
+    src: meow3
   },
   meow4: {
-    keyCode: 444,
     name: 'meow4',
-    src: './assets/meow4.mp3'
+    src: meow4
   },
   meow5: {
-    keyCode: 555,
     name: 'meow5',
-    src: './assets/meow1.mp3'
+    src: meow5
   },
   meow6: {
-    keyCode: 666,
     name: 'meow6',
-    src: './assets/meow6.mp3'
+    src: meow6
   },
   meow7: {
-    keyCode: 777,
     name: 'meow7',
-    src: './assets/meow7.mp3'
+    src: meow7
   },
   meow8: {
-    keyCode: 888,
     name: 'meow8',
-    src: './assets/meow8.mp3'
+    src: meow8
   },
   meow9: {
-    keycode: 999,
-    name: 'moew9',
-    src: './assets.meow9.mp3'
+    name: 'meow9',
+    src: meow9
   }
 };
 export default class App extends Component {
@@ -71,7 +73,7 @@ export default class App extends Component {
   state = {
     playing: ''
   }
-
+  
   play = meowId => {
     const ref = this[meowId];
     this.setState({ playing: meowMap[meowId].name });
@@ -79,29 +81,21 @@ export default class App extends Component {
     ref.current.currentTime = 0;
     ref.current.play();
   }
-
-  keyDown = event => {
-    console.log(Object.entries(meowMap));
-    const entry = Object.entries(meowMap).find(n => n[1].keyCode === event.keyCode);
-    this.play(entry[0]);
-  }
-
+  
+  
   render() {
+    const meowArr = [this.meow1, this.meow2, this.meow3, this.meow4, this.meow5, this.meow6, this.meow7, this.meow8, this.meow9];
+    const catsArr = [this.cat1, this.cat2, this.cat3, this.cat4, this.cat5, this.cat6, this.cat7, this.cat8, this.cat9];
+    const buttonList = meowArr.map((meow, i) => {
+      return <Button image={`image${i + 1}`} key={i} meowRef={meow} name={`meow${i + 1}`} play={this.play} />;
+    });
+    
     return (
-      <section onKeyDown={this.keyDown}>
+      <section>
         <h1>{this.state.playing}</h1>
-        <Button audioRef={this.meow1} name="meow1" play={this.play} />
-        <Button audioRef={this.meow2} name="meow2" play={this.play} />
+        {buttonList}
       </section>
     );
   }
 }
 
-function Button({ meowRef, name, play }) {
-  return (
-    <>
-      <button onClick={() => play(name)}>{name}</button>
-      <audio ref={meowRef} />
-    </>
-  );
-}
