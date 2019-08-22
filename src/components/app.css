@@ -3,7 +3,7 @@
 section {
   margin: auto;
   width: 35vw;
-  height: 84vh;
+  height: auto;
   background-color: #dbdcff;
   border-radius: 15px;
   border: solid #eecbff;
