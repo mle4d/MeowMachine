@@ -94,14 +94,15 @@ export default class App extends Component {
   
   render() {
     const meowArr = [this.meow1, this.meow2, this.meow3, this.meow4, this.meow5, this.meow6, this.meow7, this.meow8, this.meow9];
-    // const catsArr = [this.cat1, this.cat2, this.cat3, this.cat4, this.cat5, this.cat6, this.cat7, this.cat8, this.cat9];
     const buttonList = meowArr.map((meow, i) => {
       return <Button image={meowMap[`meow${i + 1}`].image} key={i} meowRef={meow} name={`meow${i + 1}`} play={this.play} />;
     });
     
     return (
       <section>
+        <h1>Meow Machine</h1>
         {buttonList}
+        <h3>Brought to you by <a href="https://github.com/mle4d">Mle4d</a></h3>
       </section>
     );
   }
