@@ -10,8 +10,16 @@
     background: no-repeat center #ffd4e5;
   }
   button:hover {opacity: 1}
-
-  
- 
-
-
+  @media screen and (max-width: 1080px) and (min-width: 400px) {
+    button {
+      height: 33vh;
+      width: 33%;
+      margin: auto;
+      border-radius: 15px;
+      border: 2px solid #eecbff;
+      justify-content: space-around;
+      opacity: 0.85;
+      background: no-repeat center #ffd4e5;
+    }
+    button:hover {opacity: 1}
+  }

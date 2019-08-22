@@ -31,3 +31,14 @@ a {
   font-family: 'Shadows Into Light', cursive;
   font-size: 2vw;
 }
+@media screen and (max-width: 1080px) and (min-width: 400px) {
+  section {
+    margin: auto;
+    width: auto;
+    height: auto;
+    background-color: #dbdcff;
+    border-radius: 15px;
+    border: solid #eecbff;
+    padding: 10px;
+  }
+}
