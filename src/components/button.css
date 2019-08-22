@@ -1,19 +1,17 @@
 
   button {
-    height: 25vh;
-    width: 33%;
+    height: 23vh;
+    width: 12vw;
     margin: auto;
     border-radius: 15px;
-    border: 2px ridge #eecbff;
+    border: 2px solid #eecbff;
     justify-content: space-around;
-    opacity: 0.89;
+    opacity: 0.85;
     background: no-repeat center #ffd4e5;
   }
   button:hover {opacity: 1}
 
-  .image {
-    height: 15px;
-  }
+  
  
 
 
