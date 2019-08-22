@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen|Pacifico&display=swap');
+
 h1 {
+  margin: auto;
   color: #aafff8;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 50px;
+  width: 400px;
 }
 body {
   background-color: pink;
-  text-align: center;
 }
