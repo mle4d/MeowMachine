@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 section {
   margin: auto;
-  width: 400px;
-  height: 85vh;
+  width: 35vw;
+  height: 84vh;
   background-color: #dbdcff;
   border-radius: 15px;
   border: solid #eecbff;
@@ -23,12 +23,11 @@ h3 {
   margin: auto;
   color: #b9bbf5;
   font-family: 'Shadows Into Light', cursive;
-  font-size: 4vh;
-  width: 400px;
+  font-size: 2vw;
   margin-top: 15px;
 }
 a {
   color: #b9bbf5;
   font-family: 'Shadows Into Light', cursive;
-  font-size: 20px;
+  font-size: 2vw;
 }
